@@ -1,6 +1,6 @@
 {
   "theme": {
-    "name": "BoxTheme",
+    "name": "BillboardTheme",
     "styles": [
       "default",
       "purple",
@@ -13,18 +13,18 @@
     ],
     "version": "2.14",
     "sharedTheme": {
-      "useHeader": false,
-      "useLogo": false,
-      "isPortalSupport": false
+      "useHeader": true,
+      "useLogo": true,
+      "isPortalSupport": true
     },
     "customStyles": {
-      "mainBackgroundColor": ""
+      "mainBackgroundColor": null
     }
   },
-  "portalUrl": "https://ryansso.maps.arcgis.com",
+  "portalUrl": "https://mohawkarcgis.maps.arcgis.com",
   "appId": "",
   "authorizedCrossOriginDomains": [],
-  "title": "Assignment Four Toronto Places of Interest",
+  "title": "The great city of Toronto places of interest",
   "subtitle": "with Web AppBuilder for ArcGIS",
   "keepAppState": true,
   "logo": "images/app-logo.png",
@@ -33,108 +33,81 @@
   "widgetOnScreen": {
     "widgets": [
       {
-        "uri": "themes/BoxTheme/widgets/BoxController/Widget",
+        "uri": "widgets/Search/Widget",
+        "position": {
+          "left": 60,
+          "top": 10,
+          "relativeTo": "map"
+        },
+        "version": "2.14",
+        "id": "widgets_Search_Widget_20",
+        "name": "Search"
+      },
+      {
+        "uri": "widgets/ZoomSlider/Widget",
+        "position": {
+          "top": 10,
+          "left": 15,
+          "relativeTo": "map"
+        },
+        "version": "2.14",
+        "id": "widgets_ZoomSlider_Widget_21",
+        "name": "ZoomSlider"
+      },
+      {
+        "uri": "widgets/HomeButton/Widget",
+        "position": {
+          "left": 15,
+          "top": 80,
+          "relativeTo": "map"
+        },
+        "version": "2.14",
+        "id": "widgets_HomeButton_Widget_22",
+        "name": "HomeButton"
+      },
+      {
+        "uri": "widgets/MyLocation/Widget",
+        "position": {
+          "left": 15,
+          "top": 120,
+          "relativeTo": "map"
+        },
+        "version": "2.14",
+        "id": "widgets_MyLocation_Widget_23",
+        "name": "MyLocation"
+      },
+      {
+        "uri": "widgets/Scalebar/Widget",
+        "position": {
+          "left": 15,
+          "bottom": 25,
+          "relativeTo": "map"
+        },
+        "version": "2.14",
+        "id": "widgets_Scalebar_Widget_24",
+        "name": "Scalebar"
+      },
+      {
+        "uri": "widgets/Coordinate/Widget",
+        "position": {
+          "left": 15,
+          "bottom": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.14",
+        "id": "widgets_Coordinate_Widget_25",
+        "name": "Coordinate"
+      },
+      {
+        "uri": "widgets/OverviewMap/Widget",
         "position": {
           "right": 0,
           "bottom": 0,
           "relativeTo": "map"
         },
         "version": "2.14",
-        "id": "themes_BoxTheme_widgets_BoxController_Widget_20",
-        "name": "BoxController"
-      },
-      {
-        "uri": "widgets/OverviewMap/Widget",
-        "visible": false,
-        "position": {
-          "right": 0,
-          "top": 0,
-          "relativeTo": "map"
-        },
-        "version": "2.14",
-        "id": "widgets_OverviewMap_Widget_21",
+        "id": "widgets_OverviewMap_Widget_26",
         "name": "OverviewMap"
-      },
-      {
-        "uri": "widgets/ZoomSlider/Widget",
-        "position": {
-          "left": 10,
-          "top": 10,
-          "relativeTo": "map"
-        },
-        "version": "2.14",
-        "id": "widgets_ZoomSlider_Widget_22",
-        "name": "ZoomSlider"
-      },
-      {
-        "uri": "widgets/HomeButton/Widget",
-        "visible": false,
-        "position": {
-          "left": 10,
-          "top": 70,
-          "relativeTo": "map"
-        },
-        "version": "2.14",
-        "id": "widgets_HomeButton_Widget_23",
-        "name": "HomeButton"
-      },
-      {
-        "uri": "widgets/MyLocation/Widget",
-        "visible": false,
-        "position": {
-          "left": 10,
-          "top": 100,
-          "relativeTo": "map"
-        },
-        "version": "2.14",
-        "id": "widgets_MyLocation_Widget_24",
-        "name": "MyLocation"
-      },
-      {
-        "uri": "widgets/Search/Widget",
-        "visible": false,
-        "position": {
-          "left": 40,
-          "top": 10,
-          "relativeTo": "map"
-        },
-        "version": "2.14",
-        "id": "widgets_Search_Widget_25",
-        "name": "Search"
-      },
-      {
-        "uri": "widgets/Scalebar/Widget",
-        "visible": false,
-        "position": {
-          "left": 10,
-          "bottom": 30,
-          "relativeTo": "map"
-        },
-        "version": "2.14",
-        "id": "widgets_Scalebar_Widget_26",
-        "name": "Scalebar"
-      },
-      {
-        "uri": "widgets/Coordinate/Widget",
-        "visible": false,
-        "position": {
-          "left": 10,
-          "bottom": 10,
-          "relativeTo": "map"
-        },
-        "version": "2.14",
-        "id": "widgets_Coordinate_Widget_27",
-        "name": "Coordinate"
-      },
-      {
-        "uri": "widgets/AttributeTable/Widget",
-        "visible": false,
-        "version": "2.14",
-        "position": {
-          "relativeTo": "browser"
-        },
-        "id": "widgets_AttributeTable_Widget_28",
-        "name": "AttributeTable"
       },
       {
         "uri": "widgets/Splash/Widget",
@@ -143,31 +116,92 @@
           "relativeTo": "browser"
         },
         "version": "2.14",
-        "id": "widgets_Splash_Widget_29",
+        "id": "widgets_Splash_Widget_27",
         "name": "Splash"
+      },
+      {
+        "position": {
+          "left": 60,
+          "top": 53,
+          "relativeTo": "map"
+        },
+        "placeholderIndex": 1,
+        "id": "_28",
+        "name": "PopupPanel",
+        "version": "2.13",
+        "closeable": true,
+        "uri": "widgets/PopupPanel/Widget",
+        "config": "configs/PopupPanel/config__28.json"
+      },
+      {
+        "position": {
+          "left": 105,
+          "top": 53,
+          "relativeTo": "map"
+        },
+        "placeholderIndex": 1,
+        "id": "_29",
+        "name": "SituationAwareness",
+        "version": "2.14",
+        "closeable": true,
+        "uri": "widgets/SituationAwareness/Widget",
+        "config": "configs/SituationAwareness/config__29.json"
+      },
+      {
+        "position": {
+          "left": 150,
+          "top": 53,
+          "relativeTo": "map"
+        },
+        "placeholderIndex": 1,
+        "id": "_30",
+        "name": "InfoSummary",
+        "version": "2.14",
+        "closeable": true,
+        "IsController": false,
+        "uri": "widgets/InfoSummary/Widget",
+        "config": "configs/InfoSummary/config__30.json"
+      },
+      {
+        "position": {
+          "left": 195,
+          "top": 53,
+          "relativeTo": "map"
+        },
+        "placeholderIndex": 1,
+        "id": "_31"
+      },
+      {
+        "position": {
+          "left": 240,
+          "top": 53,
+          "relativeTo": "map"
+        },
+        "placeholderIndex": 2,
+        "id": "_32"
       },
       {
         "uri": "widgets/ExtentNavigate/Widget",
         "visible": false,
         "position": {
-          "left": 10,
-          "top": 160,
+          "left": 15,
+          "top": 159,
           "relativeTo": "map"
         },
         "version": "2.14",
-        "id": "widgets_ExtentNavigate_Widget_30",
+        "id": "widgets_ExtentNavigate_Widget_33",
         "name": "ExtentNavigate"
       },
       {
         "uri": "widgets/FullScreen/Widget",
         "visible": false,
         "position": {
-          "left": 10,
-          "top": 130,
+          "right": 8,
+          "top": 8,
           "relativeTo": "map"
         },
         "version": "2.14",
-        "id": "widgets_FullScreen_Widget_31",
+        "id": "widgets_FullScreen_Widget_34",
         "name": "FullScreen"
       }
     ],
@@ -187,71 +221,171 @@
       "right": 0,
       "bottom": 0
     },
-    "itemId": "42b5dadb2ce74fa58d2e9af0ce9b9ed5",
+    "itemId": "39e08ae9d2134c319d66496f8068420d",
     "mapOptions": {},
     "id": "map",
-    "portalUrl": "https://ryansso.maps.arcgis.com",
+    "portalUrl": "https://mohawkarcgis.maps.arcgis.com",
     "mapRefreshInterval": {
       "useWebMapRefreshInterval": true
     }
   },
   "widgetPool": {
-    "panel": {
-      "uri": "themes/BoxTheme/panels/BoxPanel/Panel",
-      "positionRelativeTo": "browser",
-      "position": {
-        "left": 0,
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "relativeTo": "browser"
-      }
-    },
     "widgets": [
       {
         "uri": "widgets/Legend/Widget",
         "version": "2.14",
         "id": "widgets_Legend_Widget_18",
         "name": "Legend",
-        "index": 2
+        "index": 0
       },
       {
         "uri": "widgets/LayerList/Widget",
         "version": "2.14",
         "id": "widgets_LayerList_Widget_19",
         "name": "LayerList",
-        "index": 3
-      },
-      {
-        "name": "PopupPanel",
-        "version": "2.13",
-        "uri": "widgets/PopupPanel/Widget",
-        "config": "configs/PopupPanel/config_widgets_PopupPanel_Widget_32.json",
-        "index": 4,
-        "id": "widgets_PopupPanel_Widget_32"
-      },
-      {
-        "name": "SituationAwareness",
-        "version": "2.14",
-        "uri": "widgets/SituationAwareness/Widget",
-        "config": "configs/SituationAwareness/config_widgets_SituationAwareness_Widget_33.json",
-        "index": 5,
-        "id": "widgets_SituationAwareness_Widget_33",
-        "position": {
-          "relativeTo": "map"
-        }
-      },
-      {
-        "name": "InfoSummary",
-        "version": "2.14",
-        "IsController": false,
-        "uri": "widgets/InfoSummary/Widget",
-        "config": "configs/InfoSummary/config_widgets_InfoSummary_Widget_34.json",
-        "index": 7,
-        "id": "widgets_InfoSummary_Widget_34"
+        "index": 1
       }
     ],
-    "groups": []
+    "groups": [],
+    "panel": {
+      "uri": "jimu/OnScreenWidgetPanel",
+      "position": {
+        "relativeTo": "map"
+      }
+    }
+  },
+  "mobileLayout": {
+    "widgetOnScreen": {
+      "widgets": [
+        {
+          "uri": "widgets/Search/Widget",
+          "position": {
+            "left": 60,
+            "top": 10
+          },
+          "version": "2.14"
+        },
+        {
+          "uri": "widgets/ZoomSlider/Widget",
+          "position": {
+            "top": 10,
+            "left": 15
+          },
+          "version": "2.14"
+        },
+        {
+          "uri": "widgets/HomeButton/Widget",
+          "position": {
+            "left": 15,
+            "top": 80
+          },
+          "version": "2.14"
+        },
+        {
+          "uri": "widgets/MyLocation/Widget",
+          "position": {
+            "left": 15,
+            "top": 120
+          },
+          "version": "2.14"
+        },
+        {
+          "uri": "widgets/Scalebar/Widget",
+          "position": {
+            "left": 15,
+            "bottom": 25,
+            "relativeTo": "map"
+          },
+          "version": "2.14"
+        },
+        {
+          "uri": "widgets/Coordinate/Widget",
+          "position": {
+            "left": 15,
+            "bottom": 5,
+            "relativeTo": "map"
+          },
+          "version": "2.14"
+        },
+        {
+          "uri": "widgets/OverviewMap/Widget",
+          "position": {
+            "right": 0,
+            "bottom": 0
+          },
+          "version": "2.14"
+        },
+        {
+          "uri": "widgets/Splash/Widget",
+          "visible": false,
+          "position": {
+            "relativeTo": "browser"
+          },
+          "version": "2.14"
+        },
+        {
+          "position": {
+            "left": 60,
+            "top": 53,
+            "relativeTo": "map"
+          }
+        },
+        {
+          "position": {
+            "left": 105,
+            "top": 53,
+            "relativeTo": "map"
+          }
+        },
+        {
+          "position": {
+            "left": 150,
+            "top": 53,
+            "relativeTo": "map"
+          }
+        },
+        {
+          "position": {
+            "left": 195,
+            "top": 53,
+            "relativeTo": "map"
+          }
+        },
+        {
+          "position": {
+            "left": 240,
+            "top": 53,
+            "relativeTo": "map"
+          }
+        },
+        {
+          "uri": "widgets/ExtentNavigate/Widget",
+          "visible": false,
+          "position": {
+            "left": 15,
+            "top": 159
+          },
+          "version": "2.14"
+        },
+        {
+          "uri": "widgets/FullScreen/Widget",
+          "visible": false,
+          "position": {
+            "right": 8,
+            "top": 8
+          },
+          "version": "2.14"
+        }
+      ]
+    },
+    "map": {
+      "position": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      }
+    }
   },
   "loadingPage": {
     "backgroundColor": "#508dca",
